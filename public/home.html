@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Supplement Store</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="image/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+</head>
+<body>
+    <header class="header">
+        <a href="#" class="logo"><i class="fa fa-shopping-basket"></i> Supplements</a>
+        <nav class="navbar">
+            <a href="#home">home</a>
+            <a href="#features">features</a>
+            <a href="#products">products</a>
+            <a href="#categories">categories</a>
+            <a href="#review">review</a>
+            <a href="#blogs">blogs</a>
+        </nav>
+
+        <div class="icons">
+            <div class="fa fa-bars" id="menu-btn"></div>
+            <div class="fa fa-search" id="search-btn"></div>
+            <div class="fa fa-shopping-cart" id="cart-btn"></div>
+            <div class="fa fa-user" id="login-btn"></div>
+        </div>
+
+        <form class="search-form">
+            <input type="search" id="search-box" placeholder="Search Here...">
+            <label for="search-box" class="fa fa-search"></label>
+        </form>
+
+        <div class="shopping-cart">
+            <div class="box">
+                <i class="fa fa-trash"></i>
+                <img src="image/cart1.jpg" >
+                <div class="content">
+                    <h3>On whey</h3>
+                    <span class="price">$5.99/-</span>
+                    <span class="quantity">Qty : 1</span>
+                </div>
+            </div>
+
+            <div class="box">
+                <i class="fa fa-trash"></i>
+                <img src="image/cart2.jpg" >
+                <div class="content">
+                    <h3>InLife whey</h3>
+                    <span class="price">$4.39/-</span>
+                    <span class="quantity">Qty : 1</span>
+                </div>
+            </div>
+
+            <div class="box">
+                <i class="fa fa-trash"></i>
+                <img src="image/cart1.jpg" >
+                <div class="content">
+                    <h3>On whey</h3>
+                    <span class="price">$5.99/-</span>
+                    <span class="quantity">Qty : 1</span>
+                </div>
+            </div>
+            <div class="total"> total : 18.97/-</div>
+            <a href="#" class="btn">Checkout</a>
+
+        </div>
+
+        <form action="#" class="login-form">
+            <h3>logout</h3>
+            <p>Are you sure you want to logout?</p>
+            <!-- <input type="email" placeholder="your email" class="box">
+        <input type="password" placeholder="your password" class="box">
+<p>Forget Your Password <a href="#">Click Here</a></p>
+<p>Don't Have An Account <a href="#">Create Now</a></p> -->
+        <input type="submit" value="Logout" class="btn">    
+        </form>
+        
+    </header>
+<!-- header section finished -->
+<!-- banner section -->
+<section class="home" id="home">
+    <div class="content">
+        <h3>Genuine And <span>Healthy</span> Products For You</h3>
+        <p>This website is designed by Shreyas Mahajan.</p>
+        <!-- <a href="#" class="btn">Shop Now</a> -->
+        <a href="#" class="btn" id="shop-now-btn">Shop Now</a>
+<!-- <a href="#" class="btn" id="login-now-btn">Login Now</a> -->
+
+    </div>
+</section>
+<!-- banner section finished-->
+<!-- our features section  -->
+<section class="features" id="features">
+    <h1 class="heading"> our <span>features</span></h1>
+
+    <div class="box-container">
+        <div class="box">
+            <img src="image/fast-delivery.jpg" alt="">
+            <h3>fish oil</h3>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dicta, maxime!</p>
+            <a href="#" class="btn">read more</a>
+        </div>
+        <div class="box">
+            <img src="image/fast-delivery.jpg" alt="">
+            <h3>fish oil</h3>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dicta, maxime!</p>
+            <a href="#" class="btn">read more</a>
+        </div>
+        <div class="box">
+            <img src="image/card-pay.jpg" alt="">
+            <h3>fish oil</h3>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dicta, maxime!</p>
+            <a href="#" class="btn">read more</a>
+        </div>
+    </div>
+</section>
+<!-- our features section finished  -->
+<!-- our products section  -->
+<section class="products" id="products">
+    <h1 class="heading">Our <span>products</span></h1>
+
+    <div class="swiper product-slider">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide box">
+                <img src="image/creatine.jpg" >
+                <h1>Creatine</h1>
+                <div class="price"> $25.99/- - 30.99/-</div>
+                <div class="stars">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-half"></i>
+                </div>
+                <a href="" class="btn">Add to Cart</a>
+            </div>
+
+            <div class="swiper-slide box">
+                <img src="image/multivitamin.jpg" >
+                <h1>MultiVitamin</h1>
+                <div class="price"> $22.99/- - 28.99/-</div>
+                <div class="stars">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-half"></i>
+                </div>
+                <a href="" class="btn">Add to Cart</a>
+            </div>
+
+            <div class="swiper-slide box">
+                <img src="image/fishoil.jpg" >
+                <h1>FishOil</h1>
+                <div class="price"> $21.99/- - 29.99/-</div>
+                <div class="stars">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-half"></i>
+                </div>
+                <a href="" class="btn">Add to Cart</a>
+            </div>
+
+            <div class="swiper-slide box">
+                <img src="image/bcaa.jpg" >
+                <h1>BCAA</h1>
+                <div class="price"> $35.99/- - 39.99/-</div>
+                <div class="stars">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-half"></i>
+                </div>
+                <a href="" class="btn">Add to Cart</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="swiper product-slider">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide box">
+                <img src="image/fast-delivery.jpg" >
+                <h1>Creatine</h1>
+                <div class="price"> $25.99/- - 30.99/-</div>
+                <div class="stars">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-half"></i>
+                </div>
+                <a href="" class="btn">Add to Cart</a>
+            </div>
+
+            <div class="swiper-slide box">
+                <img src="image/fast-delivery.jpg" >
+                <h1>MultiVitamin</h1>
+                <div class="price"> $22.99/- - 28.99/-</div>
+                <div class="stars">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-half"></i>
+                </div>
+                <a href="" class="btn">Add to Cart</a>
+            </div>
+
+            <div class="swiper-slide box">
+                <img src="image/fast-delivery.jpg" >
+                <h1>FishOil</h1>
+                <div class="price"> $21.99/- - 29.99/-</div>
+                <div class="stars">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-half"></i>
+                </div>
+                <a href="" class="btn">Add to Cart</a>
+            </div>
+
+            <div class="swiper-slide box">
+                <img src="image/fast-delivery.jpg" >
+                <h1>BCAA</h1>
+                <div class="price"> $35.99/- - 39.99/-</div>
+                <div class="stars">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-half"></i>
+                </div>
+                <a href="" class="btn">Add to Cart</a>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- our products section  -->
+<!-- our categories section  -->
+<section class="categories" id="categories">
+    <h1 class="heading">product <span>categories</span></h1>
+
+    <div class="box-container">
+        <div class="box">
+            <img src="image/category-1.jpg">
+            <h3>Pre Workout</h3>
+            <p>Upto 45% Off</p>
+            <a href="#" class="btn">Shop Now</a>
+        </div>
+
+        <div class="box">
+            <img src="image/bcaa.jpg">
+            <h3>During Workout</h3>
+            <p>Upto 45% Off</p>
+            <a href="#" class="btn">Shop Now</a>
+        </div>
+
+        <div class="box">
+            <img src="image/cart1.jpg">
+            <h3>Post Workout</h3>
+            <p>Upto 45% Off</p>
+            <a href="#" class="btn">Shop Now</a>
+        </div>
+
+        <div class="box">
+            <img src="image/card-pay.jpg">
+            <h3>Dietary Supplements</h3>
+            <p>Upto 45% Off</p>
+            <a href="#" class="btn">Shop Now</a>
+        </div>
+    </div>
+</section>
+<!-- our categories section  -->
+<!-- our review section  -->
+<section class="review" id="review">
+    <h1 class="heading">Customer's <span>Review</span></h1>
+    <div class="swiper review-slider">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide box">
+                <img src="image/review1.jpg">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti, incidunt.</p>
+                <h3>Shreyas</h3>
+                <div class="stars">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-half"></i>
+                </div>
+            </div>
+
+            <div class="swiper-slide box">
+                <img src="image/review2.JPG">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti, incidunt.</p>
+                <h3>John</h3>
+                <div class="stars">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                </div>
+            </div>
+
+            <div class="swiper-slide box">
+                <img src="image/review3.jpg">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti, incidunt.</p>
+                <h3>Rohan</h3>
+                <div class="stars">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-half"></i>
+                </div>
+            </div>
+
+            <div class="swiper-slide box">
+                <img src="image/review2.JPG">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti, incidunt.</p>
+                <h3>John</h3>
+                <div class="stars">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- our review section  -->
+<!-- our blogs  -->
+<section class="blogs" id="blogs">
+    <h1 class="heading">Our <span>Blogs</span></h1>
+    <div class="box-container">
+        <div class="box">
+            <img src="">
+            <div class="content">
+                <div class="icons">
+                    <a href="#"><i class="fa fa-user"></i> By User</a>
+                    <a href="#"><i class="fa fa-calendar"></i> 21st July,2023</a>
+                </div>
+                <h3>Trust Worthy Products</h3>
+                <p>Lorem ipsum dolor sit amet.</p>
+                <a href="#" class="btn">Read More</a>
+            </div>
+        </div>
+
+        <div class="box">
+            <img src="">
+            <div class="content">
+                <div class="icons">
+                    <a href="#"><i class="fa fa-user"></i> By User</a>
+                    <a href="#"><i class="fa fa-calendar"></i> 17th Aug,2023</a>
+                </div>
+                <h3>Geniune Product</h3>
+                <p>Lorem ipsum dolor sit amet.</p>
+                <a href="#" class="btn">Read More</a>
+            </div>
+        </div>
+
+        <div class="box">
+            <img src="">
+            <div class="content">
+                <div class="icons">
+                    <a href="#"><i class="fa fa-user"></i> By User</a>
+                    <a href="#"><i class="fa fa-calendar"></i> 8th Sep,2023</a>
+                </div>
+                <h3>Safe Products </h3>
+                <p>Lorem ipsum dolor sit amet.</p>
+                <a href="#" class="btn">Read More</a>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- our blogs  -->
+<!-- footer section  -->
+<section class="footer">
+    <div class="box-container">
+        <div class="box">
+            <h3>Supplements <i class="fa fa-shopping-basket"></i></h3>
+            <p>Feel Free To Follow Us On Our Social Media Handles All The Links Are Given Below.</p>
+
+            <div class="share">
+                <a href="#" class="fa fa-facebook"></a>
+                <a href="#" class="fa fa-twitter"></a>
+                <a href="#" class="fa fa-instagram"></a>
+                <a href="#" class="fa fa-linkedin"></a>
+            </div>
+        </div>
+
+        <div class="box">
+            <h3>Contact Info </h3>
+            <a href="#" class="links"><i class="fa fa-phone"></i> +91 981772534</a>
+            <a href="#" class="links"><i class="fa fa-phone"></i> +91 881643522</a>
+            <a href="#" class="links"><i class="fa fa-envelope"></i> info@gmail.com</a>
+            <a href="#" class="links"><i class="fa fa-map-marker"></i> Chandigarh, India</a>
+        </div>
+
+        <div class="box">
+            <h3>Quick Links </h3>
+            <a href="#" class="links" id="home"><i class="fa fa-arrow-right"></i> Home</a>
+            <a href="#" class="links" id="features"><i class="fa fa-arrow-right"></i> Features</a>
+            <a href="#" class="links" id="products"><i class="fa fa-arrow-right"></i> Products</a>
+            <a href="#" class="links" id="categories"><i class="fa fa-arrow-right"></i> Categories</a>
+            <a href="#" class="links" id="review"><i class="fa fa-arrow-right"></i> Review</a>
+            <a href="#" class="links" id="blogs"><i class="fa fa-arrow-right"></i> Blogs</a>
+        </div>
+
+        <div class="box">
+            <h3>Newsletter </h3>
+            <p>Subscribe For Latest Updates</p>
+            <input type="email" placeholder="Your Email" class="email">
+            <input type="submit" value="Subscribe" class="btn">
+            <img src="image/payment.png" class="payment-img">
+            
+        </div>
+    </div>
+<div class="credit">
+    Created By <span>Shreyas Mahajan</span> | &copy; All Rights Reserved 
+</div>
+</section>
+<!-- footer section  -->
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
