@@ -30,13 +30,14 @@ app.post('/register', async (req, res) => {
     const existingUser = await User.findOne({ email });               // Check if the user already exists
 
     if (existingUser) {
-      return res.status(400).json({ message: 'User already exists' });
+      return res.sendFile(path.join(__dirname,'public','login.html'));
+      // return res.status(400).json({ message: 'User already exists' });
     }
     const hashedPassword = await bcrypt.hash(password, 10);           // Hash the password
     const newUser = new User({ email, password: hashedPassword });
     await newUser.save();
-
-    res.status(201).json({ message: 'User registered successfully' });
+    res.sendFile(path.join(__dirname,'public','login.html'));
+    // res.status(201).json({ message: 'User registered successfully' });
   } catch (error) {
     console.error(error);
     res.status(500).json({ message: 'Internal server error' });
