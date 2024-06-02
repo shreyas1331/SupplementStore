@@ -4,30 +4,92 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Supplement Store</title>
-  <link rel="stylesheet" href="styles.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      overflow: hidden; /* Prevents scrollbars due to blurred background */
+    }
+    .background-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url('image/supplement_login.jpeg.jpg'); /* Replace 'background-image.jpg' with your actual image file */
+      background-size: cover;
+      background-position: center;
+      filter: blur(5px); /* Adjust the blur intensity as needed */
+      z-index: -1; /* Places the background behind other content */
+    }
+    .form-container {
+      position: relative; /* Make it relative to the body */
+      max-width: 400px;
+      margin: 50px auto;
+      background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background to improve readability */
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    .form-group {
+      margin-bottom: 20px;
+    }
+    label {
+      display: block;
+      font-weight: bold;
+    }
+    input[type="email"],
+    input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+    button {
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    button[type="button"] {
+      background-color: #28a745;
+    }
+    button[type="submit"] {
+      background-color: #007bff;
+    }
+    button:hover {
+      opacity: 0.8;
+    }
+  </style>
 </head>
 <body>
+  <div class="background-container"></div>
   <div class="form-container">
     <div class="form-wrapper" id="loginForm">
-      <h1>LOGIN</h1>
+      <h2>LOGIN</h2>
       <form action="/login" method="POST">
         <div class="form-group">
           <label for="loginEmail">Email:</label>
           <input type="email" id="loginEmail" name="email" required>
         </div>
-
+    
         <div class="form-group">
           <label for="loginPassword">Password:</label>
           <input type="password" id="loginPassword" name="password" required>
         </div>
-
-        <button type="button" onclick="showRegisterForm()">REGISTER</button>
+        <a href="#" style="text-decoration-line: none; font-size: small;" onclick="showRegisterForm()">Don't have an account?</a> <!-- Use onclick attribute -->
+        <br> <br>
         <button type="submit">LOGIN</button>
       </form>
     </div>
 
     <div class="form-wrapper" id="registerForm" style="display: none;">
-      <h1>REGISTER</h1>
+      <h2>REGISTER</h2>
       <form action="/register" method="POST">
         <div class="form-group">
           <label for="email">Email:</label>
@@ -46,7 +108,7 @@
   </div>
 
   <script>
-    function showRegisterForm() {
+   function showRegisterForm() {
       document.getElementById('loginForm').style.display = 'none';
       document.getElementById('registerForm').style.display = 'block';
     }
@@ -55,6 +117,27 @@
       document.getElementById('registerForm').style.display = 'none';
       document.getElementById('loginForm').style.display = 'block';
     }
+    function showErrorMessage() {
+      // Create a new div element for the error message
+      const errorMessage = document.createElement('div');
+      errorMessage.textContent = 'User already exists. Please try again.';
+      errorMessage.style.color = 'red';
+      errorMessage.style.fontWeight = 'bold';
+      errorMessage.style.marginBottom = '10px';
+
+      // Insert the error message before the loginForm
+      const loginForm = document.getElementById('loginForm');
+      loginForm.parentNode.insertBefore(errorMessage, loginForm.nextSibling);
+    }
+
+    // Check if an error parameter is present in the URL (indicating registration error)
+    const urlParams = new URLSearchParams(window.location.search);
+    if (urlParams.has('error')) {
+      showErrorMessage();
+    }
+
+
+    
   </script>
   
 </body>
