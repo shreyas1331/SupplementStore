@@ -24,25 +24,45 @@ app.get('/login', (req, res) => {
 });
 
 // Registration endpoint
+// app.post('/register', async (req, res) => {
+//   const { email, password } = req.body;
+//   try {
+//     const existingUser = await User.findOne({ email });               // Check if the user already exists
+
+//     if (existingUser) {
+//       return res.sendFile(path.join(__dirname,'public','login.html'));
+//       // return res.status(400).json({ message: 'User already exists' });
+//     }
+//     const hashedPassword = await bcrypt.hash(password, 10);           // Hash the password
+//     const newUser = new User({ email, password: hashedPassword });
+//     await newUser.save();
+//     res.sendFile(path.join(__dirname,'public','login.html'));
+//     // res.status(201).json({ message: 'User registered successfully' });
+//   } catch (error) {
+//     console.error(error);
+//     res.status(500).json({ message: 'Internal server error' });
+//   }
+// });/
+// Registration endpoint
 app.post('/register', async (req, res) => {
   const { email, password } = req.body;
   try {
-    const existingUser = await User.findOne({ email });               // Check if the user already exists
+    const existingUser = await User.findOne({ email }); 
 
     if (existingUser) {
-      return res.sendFile(path.join(__dirname,'public','login.html'));
-      // return res.status(400).json({ message: 'User already exists' });
+      return res.redirect('/login?error=userExists'); // Redirect to login page with error parameter
     }
-    const hashedPassword = await bcrypt.hash(password, 10);           // Hash the password
+
+    const hashedPassword = await bcrypt.hash(password, 10);
     const newUser = new User({ email, password: hashedPassword });
     await newUser.save();
-    res.sendFile(path.join(__dirname,'public','login.html'));
-    // res.status(201).json({ message: 'User registered successfully' });
+    res.sendFile(path.join(__dirname,'public','login.html')); // Success, redirect to login
   } catch (error) {
     console.error(error);
     res.status(500).json({ message: 'Internal server error' });
   }
 });
+
 
 // Login endpoint with JWT
 app.post('/login', async (req, res) => {
@@ -75,5 +95,5 @@ mongoose.connect(process.env.MONGODB_URI).then(() => {
       console.log(`Server started at port: ${port}`);
     });
   }).catch((error) => {
-    console.error('Error connecting to MongoDB:', error);
+    console.error('Error connecting to MongoDB:', error);
 });
